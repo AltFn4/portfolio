@@ -23,7 +23,9 @@ ul {
 
 a {
     color: white;
+    text-decoration: none;
     padding: 20px;
+    border-radius: 10%;
 }
 
 li {
@@ -37,12 +39,21 @@ main {
 section {
     width: 90%;
     height: auto;
+    min-height: 500px;
     padding: 50px;
     margin: auto;
 }
 
 header {
     font-size: 36px;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+h2 {
+    font-size: 18px;
 }
 
 #welcome {
@@ -54,7 +65,7 @@ header {
     background-color:cornsilk;
 }
 
-row {
+.row {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -78,6 +89,64 @@ row {
 
 .icon:hover {
     transform: scale(1.2);
+}
+
+.nav-button {
+    animation-duration: 250ms;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+}
+
+.nav-button:hover {
+    animation-name: colorAnim;
+}
+
+@keyframes colorAnim {
+    0% {
+        color: white;
+    }
+    100% {
+        background-color: white;
+        color: black;
+    }
+}
+
+.slide-container {
+    width: 100%;
+    height: 400px;
+    background-color: black;
+    position: relative;
+}
+
+.slide {
+    display: none;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.slide-controller {
+    display: inline-block;
+    width: 90%;
+    text-align: center;
+    margin: 0 16px;
+    padding: 16px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.left-pointer {
+    cursor: pointer;
+    float: left;
+    color: white;
+}
+
+.right-pointer {
+    cursor: pointer;
+    float: right;
+    color: white;
 }
 
 .subtitle {
