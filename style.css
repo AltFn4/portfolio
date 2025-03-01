@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 nav {
     top: 0;
     left: 0;
@@ -32,8 +36,9 @@ main {
 
 section {
     width: 90%;
-    height: 500px;
+    height: auto;
     padding: 50px;
+    margin: auto;
 }
 
 header {
@@ -42,10 +47,67 @@ header {
 
 #welcome {
     background-color: beige;
-    font-size: 18px;
+    height: 500px;
 }
 
+#skills {
+    background-color:cornsilk;
+}
+
+row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.grid {
+    display: grid;
+    gap: 25px;
+}
+
+.round {
+    border-radius: 50%;
+}
+
+.icon {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    transition: transform 250ms ease-out;
+}
+
+.icon:hover {
+    transform: scale(1.2);
+}
 
 .subtitle {
     color: grey
+}
+
+.center {
+    text-align: center;
+}
+
+.fade-in {
+    position: relative;
+    top: 40%;
+    opacity: 1;
+    animation-name: fadeInAnim;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 1.25s;
+}
+
+@keyframes fadeInAnim {
+    0% {
+        opacity: 0;
+        top: 100%;
+    }
+    90% {
+        top: 40%;
+    }
+    100% {
+        opacity: 1;
+        top: 40%;
+    }
 }

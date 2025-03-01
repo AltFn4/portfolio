@@ -1,10 +1,13 @@
 <html>
-    <head>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <nav>
-            <h1>Portforlio</h1>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <h1>Portforlio</h1>
+        <row class="row">
             <ul>
                 <li>
                     <a href="#">Home</a>
@@ -12,20 +15,56 @@
                 <li>
                     <a href="#about">About</a>
                 </li>
+                <li>
+                    <a href="#skills">Skills</a>
+                </li>
             </ul>
-        </nav>
-        <main>
-            <section id="welcome">
-                <center>
-                    <header>Welcome!</header>
-                    <p class="subtitle">A portfolio made by Tristan Tsang</p>
-                </center>
-            </section>
-            <br>
-            <section id="about">
-                <h1>About</h1>
-
-            </section>
-        </main>
-    </body>
+            <ul>
+                <li>
+                    <a href="https://www.linkedin.com/in/tristan-tsang/">
+                        <img src="assets/linkedin.svg" alt="linkedin" style="background-color: white;">
+                    </a>
+                </li>
+            </ul>
+        </row>
+    </nav>
+    <main>
+        <section id="welcome">
+            <div class="fade-in">
+                <header>Welcome!</header>
+                <p class="subtitle">A portfolio made by Tristan Tsang</p>
+            </div>
+        </section>
+        <br>
+        <section id="about">
+            <h1>About</h1>
+            <row>
+                <p>
+                    Hi, I am Tristan.
+                    Mobile and web application developing has always been my passion, I am a motivated graduate
+                    dedicated to contribute more to the software developing fields. While working at Impress Solutions
+                    Ltd, I've contributed to multiple projects using Flutter, Dart, and other technologies.
+                    <br><br>
+                    Throughout my mobile application development journey, I've worked as the main developer in the
+                    project team, where I played a significant role in developing and delivering a mobile application
+                    that matches the requirements of our clients. To ensure the products are at high standards, I
+                    dedicated significant time in code reviewing, identifying and addressing bugs preventing future
+                    development issues.
+                </p>
+                <div style="margin-left: 50px;">
+                    <img class="round" width="200"
+                        src="https://media.licdn.com/dms/image/v2/D5603AQF4bPD6WWZQqQ/profile-displayphoto-shrink_400_400/B56ZUx81lsHsAk-/0/1740299787186?e=1746057600&amp;v=beta&amp;t=NEY0B---g_IFHDY7BZK2esVJ8HYVNeJqV9gA88UDyyY"
+                        height="200" alt="Tristan (Hin Shun) Tsang">
+                </div>
+            </row>
+        </section>
+        <section id="skills">
+            <h1>Skills</h1>
+            <div class="grid">
+                <div class="round icon"></div>
+                <div class="round icon"></div>
+            </div>
+        </section>
+    </main>
+</body>
 </html>
