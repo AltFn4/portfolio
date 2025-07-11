@@ -6,22 +6,8 @@
 
 <body>
     <nav>
-        <h1>Portforlio</h1>
-        <div class="row">
-            <ul>
-                <li>
-                    <a href="#" class="nav-button">Home</a>
-                </li>
-                <li>
-                    <a href="#about" class="nav-button">About</a>
-                </li>
-                <li>
-                    <a href="#skills" class="nav-button">Skills</a>
-                </li>
-                <li>
-                    <a href="#projects" class="nav-button">Projects</a>
-                </li>
-            </ul>
+        <h1>Tristan</h1>
+        <div class="right column">
             <ul>
                 <li>
                     <a href="https://www.linkedin.com/in/tristan-tsang/">
@@ -29,16 +15,30 @@
                     </a>
                 </li>
             </ul>
+            <div class="dropdown">
+                <button class="dropdown-btn">
+                    <img src="assets/dropdown-btn.svg" alt="dropdown-btn" width="50" height="50" />
+                </button>
+                <div class="dropdown-content">
+                    <a href="#welcome" class="nav-button">Home</a>
+                    <a href="#about" class="nav-button">About</a>
+                    <a href="#skills" class="nav-button">Skills</a>
+                    <a href="#projects" class="nav-button">Projects</a>
+                </div>
+            </div>
         </div>
     </nav>
     <main>
         <section id="welcome">
+            <div class="liquid-1">
+            </div>
+            <div class="liquid-2">
+            </div>
             <div class="fade-in">
                 <header>Welcome!</header>
                 <p class="subtitle">A portfolio made by Tristan Tsang</p>
             </div>
         </section>
-        <br>
         <section id="about">
             <h1>About</h1>
             <div class="row">
@@ -55,9 +55,7 @@
                     development issues.
                 </p>
                 <div style="margin-left: 50px;">
-                    <img class="round" width="200"
-                        src="https://media.licdn.com/dms/image/v2/D5603AQF4bPD6WWZQqQ/profile-displayphoto-shrink_400_400/B56ZUx81lsHsAk-/0/1740299787186?e=1746057600&amp;v=beta&amp;t=NEY0B---g_IFHDY7BZK2esVJ8HYVNeJqV9gA88UDyyY"
-                        height="200" alt="Tristan (Hin Shun) Tsang">
+                    <img class="round" width="200" src="assets/profile.jpg" height="200" alt="Tristan (Hin Shun) Tsang">
                 </div>
             </div>
         </section>
@@ -75,9 +73,15 @@
             <a href="https://github.com/AltFn4/lab-helper" style="color: black;">Link🔗</a>
             <p></p>
             <div class="slide-container">
-                <img class="slide" src="https://media.licdn.com/dms/image/v2/D562DAQGBUSjrpxmI0w/profile-treasury-image-shrink_800_800/B56ZUAlCTTHQAc-/0/1739471464392?e=1741474800&v=beta&t=LahNkxwTmZiiK2I5zckzmTcUeLKoCN4IwVpmKGhbjVc" alt="">
-                <img class="slide" src="https://media.licdn.com/dms/image/v2/D562DAQE4UcCy36KFUw/profile-treasury-image-shrink_800_800/B56ZUAliAXGUAY-/0/1739471593834?e=1741474800&v=beta&t=tPDdffXvXrZorZw_a5L3fy8B6xj-ZTp3x0sYtwSMqzg" alt="">
-                <img class="slide" src="https://media.licdn.com/dms/image/v2/D562DAQHe0iL3WES1uA/profile-treasury-image-shrink_800_800/B56ZUAlIRhHsAY-/0/1739471488520?e=1741474800&v=beta&t=9AsGYvtNfeJ8HtEQb7mbXUAr5oyE9IaDnAr-MnHwe9M" alt="">
+                <img class="slide"
+                    src="https://media.licdn.com/dms/image/v2/D562DAQGBUSjrpxmI0w/profile-treasury-image-shrink_800_800/B56ZUAlCTTHQAc-/0/1739471464392?e=1741474800&v=beta&t=LahNkxwTmZiiK2I5zckzmTcUeLKoCN4IwVpmKGhbjVc"
+                    alt="">
+                <img class="slide"
+                    src="https://media.licdn.com/dms/image/v2/D562DAQE4UcCy36KFUw/profile-treasury-image-shrink_800_800/B56ZUAliAXGUAY-/0/1739471593834?e=1741474800&v=beta&t=tPDdffXvXrZorZw_a5L3fy8B6xj-ZTp3x0sYtwSMqzg"
+                    alt="">
+                <img class="slide"
+                    src="https://media.licdn.com/dms/image/v2/D562DAQHe0iL3WES1uA/profile-treasury-image-shrink_800_800/B56ZUAlIRhHsAY-/0/1739471488520?e=1741474800&v=beta&t=9AsGYvtNfeJ8HtEQb7mbXUAr5oyE9IaDnAr-MnHwe9M"
+                    alt="">
                 <div class="slide-controller">
                     <div class="left-pointer" onclick="addIndex(-1)">&#10094;</div>
                     <div class="right-pointer" onclick="addIndex(1)">&#10095;</div>
@@ -99,7 +103,7 @@
     function showSlide() {
         var slides = document.getElementsByClassName("slide");
 
-        for (var i=0; i < slides.length; i++) {
+        for (var i = 0; i < slides.length; i++) {
             var slide = slides[i];
             slide.style.display = 'none';
         }
@@ -115,4 +119,5 @@
         slides[slideIndex].style.display = 'block';
     }
 </script>
+
 </html>
