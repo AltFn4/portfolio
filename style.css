@@ -23,10 +23,7 @@ ul {
 }
 
 a {
-    color: white;
-    text-decoration: none;
-    padding: 20px;
-    border-radius: 10px;
+    color: aquamarine;
 }
 
 li {
@@ -48,10 +45,11 @@ main section {
 
 section {
     width: 90%;
-    height: 80%;
+    height: 50%;
     padding: 5%;
     margin: auto;
     position: relative;
+    font-size: large;
 }
 
 header {
@@ -67,12 +65,19 @@ h2 {
 }
 
 #welcome {
+    height: 80%;
     background-color: rgb(43, 43, 43);
     color: rgb(255, 255, 255);
 }
 
 #skills {
-    background-color:cornsilk;
+    background-color:rgb(94, 93, 91);
+}
+
+#contact-me {
+    background-color: rgb(43, 43, 43);
+    color: rgb(255, 255, 255);
+    height: 20%;
 }
 
 .row {
@@ -98,15 +103,46 @@ h2 {
 }
 
 .icon {
+    width: 80px;
+    max-height: auto;
+    background-color: transparent;
+    transition: transform 250ms ease-out;
+}
+
+.tree {
+    position: relative;
     width: 100px;
     height: 100px;
-    background-color: white;
-    transition: transform 250ms ease-out;
+    border-radius: 50%;
+}
+
+.node {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .icon:hover {
     transform: scale(1.2);
 }
+
+.center {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.tree .node:nth-child(2) { transform: rotate(0deg) translate(250px) rotate(-0deg); }
+.tree .node:nth-child(3) { transform: rotate(60deg) translate(250px) rotate(-60deg); }
+.tree .node:nth-child(4) { transform: rotate(120deg) translate(250px) rotate(-120deg); }
+.tree .node:nth-child(5) { transform: rotate(180deg) translate(250px) rotate(-180deg); }
+.tree .node:nth-child(6) { transform: rotate(240deg) translate(250px) rotate(-240deg); }
+.tree .node:nth-child(7) { transform: rotate(300deg) translate(250px) rotate(-300deg); }
 
 .dropdown {
   position: relative;
@@ -139,6 +175,10 @@ h2 {
 }
 
 .nav-button {
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+    border-radius: 10px;
     animation-duration: 250ms;
     animation-fill-mode: forwards;
     animation-play-state: running;
