@@ -1,31 +1,438 @@
-<html>
-    <head>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <nav>
-            <h1>Portforlio</h1>
-            <ul>
-                <li>
-                    <a href="#">Home</a>
-                </li>
-                <li>
-                    <a href="#about">About</a>
-                </li>
-            </ul>
-        </nav>
-        <main>
-            <section id="welcome">
-                <center>
-                    <header>Welcome!</header>
-                    <p class="subtitle">A portfolio made by Tristan Tsang</p>
-                </center>
-            </section>
-            <br>
-            <section id="about">
-                <h1>About</h1>
+<!DOCTYPE html>
+<html lang="en">
 
-            </section>
-        </main>
-    </body>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tristan Tsang - Innovative Developer</title>
+
+</head>
+
+<body>
+    <!-- Animated background particles -->
+    <div class="bg-particles" id="particles"></div>
+
+    <!-- Project Modal -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle" class="modal-title">Project Title</h2>
+                <button class="close-btn" id="closeModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="slideshow-container">
+                    <div id="slides"></div>
+                    <button class="slide-nav prev" id="prevSlide">&#10094;</button>
+                    <button class="slide-nav next" id="nextSlide">&#10095;</button>
+                </div>
+                <div class="slide-indicators" id="slideIndicators"></div>
+                <div class="project-details">
+                    <h3>Project Overview</h3>
+                    <p id="projectDescription">Detailed project description will appear here.</p>
+                    <div class="project-features">
+                        <h3>Key Features</h3>
+                        <ul id="projectFeatures" class="feature-list"></ul>
+                    </div>
+                    <div class="project-links" id="projectLinks"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="logo">TT</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Tristan Tsang</h1>
+            <div class="subtitle">Innovative developer and fast learner</div>
+            <p class="description">
+                Crafting digital experiences that blend creativity with cutting-edge technology.
+                I transform ideas into beautiful, functional, and user-centered solutions.
+            </p>
+            <a href="#projects" class="cta-button">View My Work</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <h2 class="fade-in">About Me</h2>
+        <div class="fade-in">
+            <p
+                style="text-align: center; font-size: 1.2rem; line-height: 1.8; opacity: 0.8; max-width: 800px; margin: 0 auto;">
+                Passionate Software Engineer with a 4.0 GPA and hands-on experience in building full-stack, real-time
+                applications.
+                Proficient in modern frameworks and cloud technologies with a proven track record of delivering robust
+                mobile and web solutions.
+                Adept at solving complex problems, optimizing performance, and collaborating in Agile teams to deliver
+                impactful, production-ready products.
+            </p>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <h2 class="fade-in">Skills & Expertise</h2>
+        <div class="skills-grid">
+            <div class="skill-card fade-in">
+                <div class="skill-icon">⚡</div>
+                <h3>Frontend Development</h3>
+                <p>React, Laravel, and modern CSS frameworks for creating dynamic user interfaces.</p>
+            </div>
+            <div class="skill-card fade-in">
+                <div class="skill-icon">🎨</div>
+                <h3>UI/UX Design</h3>
+                <p>User-centered design principles, wireframing, prototyping, and visual design systems.</p>
+            </div>
+            <div class="skill-card fade-in">
+                <div class="skill-icon">⚙️</div>
+                <h3>Backend Development</h3>
+                <p>Java, Python, databases, and API development for robust server-side solutions.</p>
+            </div>
+            <div class="skill-card fade-in">
+                <div class="skill-icon">📱</div>
+                <h3>Mobile Development</h3>
+                <p>React Native and Flutter for cross-platform mobile applications.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <h2 class="fade-in">Featured Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card fade-in" onclick="openProjectModal('lablink')">
+                <div class="project-image">📊</div>
+                <div class="project-content">
+                    <h3>Lab Progress Tracking Dashboard</h3>
+                    <p>A modern web application with real-time collaborative code editing and optimized queue systems.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">Laravel</span>
+                        <span class="tag">Tailwind CSS</span>
+                        <span class="tag">Microsoft Azure</span>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card fade-in" onclick="openProjectModal('mahjong')">
+                <div class="project-image">🀄</div>
+                <div class="project-content">
+                    <h3>Mahjong Calculator</h3>
+                    <p>Mahjong scoring app with real-time camera tile recognition, automated point calculation, and
+                        intuitive game result tracking.</p>
+                    <div class="project-tags">
+                        <span class="tag">Flutter</span>
+                        <span class="tag">Firebase</span>
+                        <span class="tag">AI/ML</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <h2 class="fade-in">Let's Work Together</h2>
+        <div class="contact-content fade-in">
+            <p>Ready to bring your vision to life? I'm always excited to collaborate on new projects and explore
+                creative solutions.</p>
+            <div class="contact-buttons">
+                <a href="mailto:tristan.tsang.hs@gmail.com" class="contact-btn">
+                    📧 Email Me
+                </a>
+                <a href="https://www.linkedin.com/in/tristan-tsang/" class="contact-btn">
+                    💼 LinkedIn
+                </a>
+                <a href="https://github.com/AltFn4" class="contact-btn">
+                    📱 GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Tristan Tsang. Crafted with passion and creativity.</p>
+    </footer>
+
+    <script>
+        // Project data with slide information
+        const projectData = {
+            'lablink': {
+                title: 'Lablink',
+                description: 'A modern web application with real-time collaborative code editing and optimized queue systems.',
+                features: [
+                    'Real-time collaborative code editing',
+                    'Optimized queue system',
+                    'Advanced search and filtering'
+                ],
+                links: [
+                    { name: '📁 GitHub', url: 'https://github.com/AltFn4/lab-helper' },
+                ],
+                slides: [
+                    { image: 'assets/lablink/ui_0.png', caption: 'Homepage for students to sign-off lab work or request help' },
+                    { image: 'assets/lablink/ui_1.png', caption: 'Lab work submission page' },
+                    { image: 'assets/lablink/ui_2.png', caption: 'Lab location search and select' },
+                    { image: 'assets/lablink/ui_3.png', caption: 'Seat map selection' },
+                    { image: 'assets/lablink/ui_4.png', caption: 'Initial homepage for students' },
+                    { image: 'assets/lablink/ui_5.png', caption: 'Homepage for students after help requested' },
+                    { image: 'assets/lablink/ui_6.png', caption: 'Code editing with multiple languages support' },
+                    { image: 'assets/lablink/ui_7.png', caption: 'Live collaborative code editing' },
+                    { image: 'assets/lablink/ui_8.png', caption: 'Initial homepage for lab assistants' },
+                    { image: 'assets/lablink/ui_9.png', caption: 'Homepage for lab assistants after task assigned' },
+                    { image: 'assets/lablink/ui_10.png', caption: 'Tasks with tag filtering' },
+                    { image: 'assets/lablink/ui_11.png', caption: 'Tasks with tag filtering (sign-off)' },
+                    { image: 'assets/lablink/ui_12.png', caption: 'Live collaborative code editing and seat tracking' },
+                    { image: 'assets/lablink/ui_13.png', caption: 'Real-time status tracking (In Queue)' },
+                    { image: 'assets/lablink/ui_14.png', caption: 'Real-time status tracking (Reviewing)' },
+                    { image: 'assets/lablink/ui_15.png', caption: 'Task sign-off record logging' },
+                    { image: 'assets/lablink/ui_16.png', caption: 'User authentication (logoff)' },
+                    { image: 'assets/lablink/ui_17.png', caption: 'User authentication (login)' },
+                ]
+            },
+            'mahjong': {
+                title: 'Mahjong Calculator',
+                description: 'Mahjong scoring app with real-time camera tile recognition, automated point calculation, and intuitive game result tracking.',
+                features: [
+                    'AI-powered tile recognition',
+                    'Automated point calculation',
+                    'Easy-to-use interface',
+                ],
+                links: [
+                    { name: '📁 GitHub', url: 'https://github.com/AltFn4/MahjongCalculator' },
+                ],
+                slides: [
+                    { image: 'assets/default_image.jpg', caption: 'Work in progress' },
+                ]
+            },
+        };
+
+        let currentSlide = 0;
+        let currentProject = null;
+
+        function openProjectModal(projectKey) {
+            const project = projectData[projectKey];
+            currentProject = project;
+            currentSlide = 0;
+
+            // Set modal content
+            document.getElementById('modalTitle').textContent = project.title;
+            document.getElementById('projectDescription').textContent = project.description;
+
+            // Create feature list
+            const featuresList = document.getElementById('projectFeatures');
+            featuresList.innerHTML = '';
+            project.features.forEach(feature => {
+                const li = document.createElement('li');
+                li.textContent = feature;
+                featuresList.appendChild(li);
+            });
+
+            // Create project links
+            const linksContainer = document.getElementById('projectLinks');
+            linksContainer.innerHTML = '';
+            project.links.forEach(link => {
+                const a = document.createElement('a');
+                a.href = link.url;
+                a.className = 'project-link';
+                a.textContent = link.name;
+                a.target = '_blank';
+                linksContainer.appendChild(a);
+            });
+
+            // Create slides
+            createSlides(project.slides);
+
+            // Show modal
+            document.getElementById('projectModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function createSlides(slides) {
+            const slidesContainer = document.getElementById('slides');
+            const indicatorsContainer = document.getElementById('slideIndicators');
+
+            slidesContainer.innerHTML = '';
+            indicatorsContainer.innerHTML = '';
+
+            slides.forEach((slide, index) => {
+                // Create slide
+                const slideDiv = document.createElement('div');
+                slideDiv.className = `slide ${index === 0 ? 'active' : ''}`;
+                slideDiv.innerHTML = `
+            <div class="slide-image" style="background-image: url('${slide.image}')">
+                <div class="slide-caption">${slide.caption}</div>
+            </div>
+        `;
+                slidesContainer.appendChild(slideDiv);
+
+                // Create indicator
+                const indicator = document.createElement('div');
+                indicator.className = `indicator ${index === 0 ? 'active' : ''}`;
+                indicator.addEventListener('click', () => goToSlide(index));
+                indicatorsContainer.appendChild(indicator);
+            });
+        }
+
+        function goToSlide(index) {
+            const slides = document.querySelectorAll('.slide');
+            const indicators = document.querySelectorAll('.indicator');
+
+            slides.forEach(slide => slide.classList.remove('active'));
+            indicators.forEach(indicator => indicator.classList.remove('active'));
+
+            slides[index].classList.add('active');
+            indicators[index].classList.add('active');
+
+            currentSlide = index;
+        }
+
+        function nextSlide() {
+            const totalSlides = document.querySelectorAll('.slide').length;
+            currentSlide = (currentSlide + 1) % totalSlides;
+            goToSlide(currentSlide);
+        }
+
+        function prevSlide() {
+            const totalSlides = document.querySelectorAll('.slide').length;
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            goToSlide(currentSlide);
+        }
+
+        function closeModal() {
+            document.getElementById('projectModal').classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Create floating particles
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = 50;
+
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.top = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 6 + 's';
+                particle.style.animationDuration = (Math.random() * 4 + 4) + 's';
+                particlesContainer.appendChild(particle);
+            }
+        }
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all fade-in elements
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Add hover effects to skill cards
+        document.querySelectorAll('.skill-card').forEach(card => {
+            card.addEventListener('mouseenter', function () {
+                this.style.transform = 'translateY(-10px) scale(1.02)';
+            });
+
+            card.addEventListener('mouseleave', function () {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+
+        // Initialize particles
+        createParticles();
+
+        // Modal event listeners
+        document.getElementById('closeModal').addEventListener('click', closeModal);
+        document.getElementById('nextSlide').addEventListener('click', nextSlide);
+        document.getElementById('prevSlide').addEventListener('click', prevSlide);
+
+        // Close modal when clicking outside
+        document.getElementById('projectModal').addEventListener('click', function (e) {
+            if (e.target === this) {
+                closeModal();
+            }
+        });
+
+        // Keyboard navigation for modal
+        document.addEventListener('keydown', function (e) {
+            const modal = document.getElementById('projectModal');
+            if (modal.classList.contains('active')) {
+                if (e.key === 'Escape') {
+                    closeModal();
+                } else if (e.key === 'ArrowLeft') {
+                    prevSlide();
+                } else if (e.key === 'ArrowRight') {
+                    nextSlide();
+                }
+            }
+        });
+
+        // Auto-advance slides every 5 seconds
+        setInterval(() => {
+            const modal = document.getElementById('projectModal');
+            if (modal.classList.contains('active')) {
+                nextSlide();
+            }
+        }, 5000);
+
+        // Add parallax effect to hero section
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const hero = document.querySelector('.hero-content');
+            if (hero) {
+                hero.style.transform = `translateY(${scrolled * 0.3}px)`;
+            }
+        });
+    </script>
+</body>
+
 </html>
