@@ -8,8 +8,8 @@ nav {
     left: 0;
     position: fixed;
     z-index: 5;
-    background-color: black;
-    color: white;
+    background-color: #28536B;
+    color: #F6F0ED;
     display: flex;
     flex-wrap: nowrap;
     width: 100%;
@@ -45,7 +45,7 @@ main section {
 
 section {
     width: 90%;
-    height: 50%;
+    height: 90dvh;
     padding: 5%;
     margin: auto;
     position: relative;
@@ -66,17 +66,17 @@ h2 {
 
 #welcome {
     height: 80%;
-    background-color: rgb(43, 43, 43);
-    color: rgb(255, 255, 255);
+    background-color: #7EA8BE;
+    color: #F6F0ED;
 }
 
 #skills {
-    background-color:rgb(94, 93, 91);
+    background-color:#7EA8BE;
 }
 
 #contact-me {
-    background-color: rgb(43, 43, 43);
-    color: rgb(255, 255, 255);
+    background-color: #28536B;
+    color: #F6F0ED;
     height: 20%;
 }
 
@@ -125,6 +125,7 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: 5px 10px;
 }
 
 .icon:hover {
@@ -137,12 +138,12 @@ h2 {
     transform: translate(-50%, -50%);
 }
 
-.tree .node:nth-child(2) { transform: rotate(0deg) translate(250px) rotate(-0deg); }
-.tree .node:nth-child(3) { transform: rotate(60deg) translate(250px) rotate(-60deg); }
-.tree .node:nth-child(4) { transform: rotate(120deg) translate(250px) rotate(-120deg); }
-.tree .node:nth-child(5) { transform: rotate(180deg) translate(250px) rotate(-180deg); }
-.tree .node:nth-child(6) { transform: rotate(240deg) translate(250px) rotate(-240deg); }
-.tree .node:nth-child(7) { transform: rotate(300deg) translate(250px) rotate(-300deg); }
+.tree .node:nth-child(2) { transform: rotate(0deg) translate(450px) rotate(-0deg); }
+.tree .node:nth-child(3) { transform: rotate(60deg) translate(450px) rotate(-60deg); }
+.tree .node:nth-child(4) { transform: rotate(120deg) translate(450px) rotate(-120deg); }
+.tree .node:nth-child(5) { transform: rotate(180deg) translate(450px) rotate(-180deg); }
+.tree .node:nth-child(6) { transform: rotate(240deg) translate(450px) rotate(-240deg); }
+.tree .node:nth-child(7) { transform: rotate(300deg) translate(450px) rotate(-300deg); }
 
 .dropdown {
   position: relative;
